@@ -27,15 +27,45 @@
         <h1> 8 in 10 people want to be more sustainable </h1>
         
 
-        <a href="https://ourworldindata.org/food-choice-vs-eating-local">
+        <!-- <a href="https://ourworldindata.org/food-choice-vs-eating-local">
         <img src="Images/Environmental-impact-of-food-by-life-cycle-stage.png" height="700" width = 700 alt="The emissions of various foodstuffs" title="https://ourworldindata.org/food-choice-vs-eating-local">
+        </a> -->
+
+        <a>
+            <img src="Images/Screenshot 2025-09-25 140311.png">
+        </a>
+
+        <div>
+
+        
+        <a href="page2.html">
+            <button id="GoToPage2">
+                <img src="Images/Taj_Mahal_-_Lamb_Curry_Madras.jpg" width="200" height="100">
+                <div>
+                Curry
+                </div>
+            </button>
         </a>
 
         <a href="page2.html">
-            <button id="GoToPage2">
-                Go To Page
+            <button id="ExampleButton">
+                <img src="Images/Shoyu-Ramen-crop2.webp" width="200" height="100">
+                <div>
+                    Ramen
+                </div>
             </button>
         </a>
+
+        <a href="page2.html">
+            <button id="ExampleButton2">
+                <img src="Images/loaded-fries-featured-image.jpg" width="200" height="100">
+                <div>
+                Loaded Fries
+                </div>
+            </button>
+        </a>
+        </div>
+
 
         <script>
              var userInputTopic = new ROSLIB.Topic({
@@ -55,5 +85,25 @@
             })
         </script>
 
+        <script>
+            document.getElementById("ExampleButton").addEventListener("click", function(){
+                var sending = new ROSLIB.Message({
+                    args: [{key: "text", value: "Sample Text"}]
+                });
+
+                userInputTopic.publish(sending);
+            })
+        </script>
+
+
+        <script>
+            document.getElementById("ExampleButton2").addEventListener("click", function(){
+                var sending = new ROSLIB.Message({
+                    args: [{key: "text", value: "Sample Text"}]
+                });
+
+                userInputTopic.publish(sending);
+            })
+        </script>
     </body>
 </html>
