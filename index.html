@@ -24,7 +24,7 @@
     </head>
     
     <body>
-        <h1> 8 in 10 people want to be more sustainable</h1>
+        <h1></h1>
         
 
         <!-- <a href="https://ourworldindata.org/food-choice-vs-eating-local">
@@ -32,51 +32,40 @@
         </a> -->
 
 <div class="image-row">
+    <!-- Here we can use the root 2 aspect ratio to resize the image based on the ari screen size, do this for all of the images please, but note that we will probably have to do a lot of horizontal strecthing because of the different aspect ratios. -->
         <a>
-            <img src="Images/Screenshot 2025-09-25 140311.png">
+            <img src="Images/Week2Main.png" height="989" width = "1400"> 
         </a>
 
-        <div class="normal">
 
-
-        <h3>
-            1kg Beef Raised = 109 Hours of Video Streaming
-        </h3>
-        <h3>
-            1kg Beef Raised = A One-Way Flight London to Paris
-        </h3>
-        
-        <a>
-            <img src="Images/QREmissionsSource.png" style="width: 175px; height: 125px;"  >
-        </a>
 
         </div>
 </div>
 
 <div>
-        <a href="page2.html">
-            <button id="GoToPage2">
-                <img src="Images/Taj_Mahal_-_Lamb_Curry_Madras.jpg" width="200" height="100">
+        <a href="PotatoPage.html">
+            <button id="GoToPotatoPage">
+                <img src="Images/Potatoish.png" width="200" height="100">
                 <div>
-                Waffles
+                Jacket Potato
                 </div>  
             </button>
         </a>
 
-        <a href="page2.html">
-            <button id="ExampleButton">
-                <img src="Images/Shoyu-Ramen-crop2.webp" width="200" height="100">
+        <a href="HomeComfortsPage.html">
+            <button id="GoToComforts">
+                <img src="Images/Borgir.png" width="200" height="100">
                 <div>
-                    Noodles
+                    Hot Home Comfort
                 </div>
             </button>
         </a>
 
-        <a href="page2.html">
-            <button id="ExampleButton2">
-                <img src="Images/loaded-fries-featured-image.jpg" width="200" height="100">
+        <a href="NoodleBarPage.html">
+            <button id="GoToNoodlePage">
+                <img src="Images/Noodles.png" width="200" height="100">
                 <div>
-                Loaded Fries
+                Noodle Bar
                 </div>
             </button>
         </a>
@@ -92,9 +81,9 @@
         </script>
 
         <script>
-            document.getElementById("GoToPage2").addEventListener("click", function(){
+            document.getElementById("GoToPotatoPage").addEventListener("click", function(){
                 var sending = new ROSLIB.Message({
-                    args: [{key: "text", value: "Sample Text"}]
+                    args: [{key: "text", value: "Main to Potato"}]
                 });
 
                 userInputTopic.publish(sending);
@@ -102,9 +91,9 @@
         </script>
 
         <script>
-            document.getElementById("ExampleButton").addEventListener("click", function(){
+            document.getElementById("GoToComforts").addEventListener("click", function(){
                 var sending = new ROSLIB.Message({
-                    args: [{key: "text", value: "Sample Text"}]
+                    args: [{key: "text", value: "Main to Home Comforts"}]
                 });
 
                 userInputTopic.publish(sending);
@@ -113,9 +102,9 @@
 
 
         <script>
-            document.getElementById("ExampleButton2").addEventListener("click", function(){
+            document.getElementById("GoToNoodlePage").addEventListener("click", function(){
                 var sending = new ROSLIB.Message({
-                    args: [{key: "text", value: "Sample Text"}]
+                    args: [{key: "text", value: "Main to Noodle Bar"}]
                 });
 
                 userInputTopic.publish(sending);
